@@ -14,8 +14,6 @@ FROM base AS release
 
 COPY . .
 
-CMD irb -Ilib
-
 # Dev image
 FROM release AS dev
 
