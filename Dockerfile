@@ -7,7 +7,7 @@ COPY Gemfile Gemfile.lock .
 
 RUN gem update --system && \
   bundle config set without 'development test' && \
-  bundle install
+  bundle
 
 # Release image
 FROM base AS release
@@ -22,6 +22,6 @@ FROM base AS test
 ENV TESTOPTS=--pride
 
 RUN bundle config --delete without && \
-  bundle install
+  bundle
 
 CMD rake test
