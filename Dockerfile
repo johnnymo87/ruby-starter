@@ -3,8 +3,7 @@ FROM ruby:3.1-bullseye AS base
 
 WORKDIR /app
 
-ADD ./Gemfile /app/Gemfile
-ADD ./Gemfile.lock /app/Gemfile.lock
+COPY Gemfile Gemfile.lock .
 
 RUN gem install bundler && \
   bundle config set without 'development test' && \
@@ -13,7 +12,7 @@ RUN gem install bundler && \
 # Release image
 FROM base AS release
 
-ADD . /app
+COPY . .
 
 CMD irb -Ilib
 
