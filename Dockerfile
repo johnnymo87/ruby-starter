@@ -16,8 +16,8 @@ COPY . .
 
 CMD irb -Ilib
 
-# Test image
-FROM base AS test
+# Dev image
+FROM release AS dev
 
 ENV TESTOPTS=--pride
 
