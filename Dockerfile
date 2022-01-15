@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY Gemfile Gemfile.lock .
 
-RUN gem install bundler && \
+RUN gem update --system && \
   bundle config set without 'development test' && \
   bundle install
 
