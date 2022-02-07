@@ -3,7 +3,7 @@ FROM ruby:3.1-bullseye AS base
 
 WORKDIR /app
 
-COPY Gemfile Gemfile.lock .
+COPY Gemfile Gemfile.lock ./
 
 RUN gem update --system && \
   bundle config set without 'development test' && \
