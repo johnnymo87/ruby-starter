@@ -1,7 +1,19 @@
 # frozen_string_literal: true
 
-class Hello
-  def self.world
-    'hello world'
+%w[
+  zeitwerk
+].each(&method(:require))
+
+# This is the main module for the hello library.
+module Hello
+  class << self
+    def world
+      World.world
+    end
   end
 end
+
+Zeitwerk::Loader
+  .for_gem
+  .tap(&:setup)
+  .tap(&:eager_load)

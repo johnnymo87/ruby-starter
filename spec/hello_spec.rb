@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'hello'
-
 RSpec.describe Hello do
   describe '.world' do
     subject(:hello_world) { described_class.world }
