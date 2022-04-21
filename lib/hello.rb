@@ -2,6 +2,6 @@
 
 class Hello
   def self.world
-    'world'
+    'hello world'
   end
 end

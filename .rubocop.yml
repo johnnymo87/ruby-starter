@@ -14,3 +14,8 @@ Layout/MultilineMethodCallIndentation:
   Description: 'Indent method calls that span more than one line.'
   StyleGuide: 'https://github.com/rubocop/ruby-style-guide#multi-line-method-chains'
   EnforcedStyle: indented
+
+Metrics/BlockLength:
+  Description: 'This cop checks if the length of a block exceeds some maximum value.'
+  Exclude:
+    - spec/**/*_spec.rb

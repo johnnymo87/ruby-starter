@@ -17,9 +17,7 @@ COPY . .
 # Dev image
 FROM release AS dev
 
-ENV TESTOPTS=--pride
-
 RUN bundle config --delete without && \
   bundle
 
-CMD rake test
+CMD rspec

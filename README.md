@@ -25,7 +25,7 @@ The only local dependency you need to configure to use this codebase is `docker-
   ```
 * Run the tests.
   ```console
-  rake test
+  rspec
   ```
 * Run `irb`.
   ```console
