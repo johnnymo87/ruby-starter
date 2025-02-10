@@ -1,5 +1,5 @@
 # Base image
-FROM ruby:3.3-bookwork AS base
+FROM ruby:3.4-bookworm AS base
 
 WORKDIR /app
 
